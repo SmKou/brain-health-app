@@ -10,9 +10,16 @@
   <body>
 	<header>
 		<div id="typing-mode">
+			<h3>Select typing mode</h3>
 			<button id="standard-type">Standard</button>
 			<button id="code-type">Code</button>
 			<button id="encode-type">Encoded</button>
+		</div>
+		<div id="prompt-type">
+			<h3>Select prompt type</h3>
+			<button id="simple-type" title="Does not include philosophical or specialized topics, or rarely used words and diction">Simple</button>
+			<button id="rare-type" title="Includes rarely used words and/or diction">Rare</button>
+			<button id="specialized-type">Specialized</button>
 		</div>
 		<div id="prompt-mode">
 			<button id="follow-prompt">Follow a prompt</button>
@@ -22,32 +29,42 @@
 		</div>
 		<div id="stats">
 			<div>
-				<span class="label lbl-num-char"></span>
+				<span class="label lbl-num-char">Num. of characters</span>
 				<span class="stat stat-num-char"></span>
 			</div>
 			<div>
-				<span class="label lbl-"></span>
+				<span class="label lbl-time">Time spent</span>
+				<span class="stat stat-time"></span>
+			</div>
+			<div>
+				<span class="label lbl-uncorrected">Uncorrected errors</span>
 				<span class="stat stat-"></span>
 			</div>
 			<div>
-				<span class="label lbl-"></span>
+				<span class="label lbl-corrected">Corrected errors</span>
 				<span class="stat stat-"></span>
 			</div>
 			<div>
-				<span class="label lbl-"></span>
-				<span class="stat stat-"></span>
+				<span class="label lbl-ttl-err">Total errors</span>
+				<span class="stat stat-ttl-err">Total errors</span>
+			</div>
+		</div>
+		<div id="progress">
+			<div>
+				<span class="label lbl-lst-spd">Last Speed</span>
+				<span class="stat stat-lst-spd"></span>
 			</div>
 			<div>
-				<span class="label lbl-"></span>
-				<span class="stat stat-"></span>
-			</div>
+				<span class="label lbl-max-spd">Fastest speed</span>
+				<span class="stat stat-max-spd">Max speed</span>
 		</div>
 	</header>
     <main>
 		<section id="prompt"></section>
-		<section></section>
+		<section id="input"></section>
     </main>
     <footer></footer>
+    <script src="/"
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -40,8 +40,14 @@
 			overflow-y: scroll;
 		}
 
-		section:last-child {
-			height: 25vh;
+		#prompt span {
+			padding-left: 1px;
+			padding-right: 1px;
+			letter-spacing: 1px;
+		}
+
+		#ipt {
+			height: calc(100vh - 75vh - 36px);
 			max-height: 200px;
 		}
 
@@ -50,13 +56,39 @@
 			height: 100%;
 			padding: 12px;
 		}
+
+		#stats {
+			height: 36px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#stats span:nth-child(odd) {
+			padding-left: 3px;
+			padding-right: 9px;
+		}
+
+		#stats span:first-child {
+			padding-left: 0
+		}
+
+		#stats span:nth-child(even) {
+			width: 120px;
+			padding-right: 6px;
+		}
     </style>
   </head>
   <body>
     <main>
 		<section id="prompt"></section>
-		<section>
+		<section id="ipt">
 			<textarea id="input"></textarea>
+		</section>
+		<section id="stats">
+			<span class="label">Characters:</span>
+			<span id="stat-chs"></span>
+			<span class="label">Time:</span>
+			<span id="stat-tme"></span>
 		</section>
     </main>
     <script type="module" src="/main.js"></script>

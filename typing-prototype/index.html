@@ -32,6 +32,12 @@
 			max-width: 640px;
 		}
 
+		#prompt-title {
+			padding: 6px 12px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
 		#prompt {
 			height: 75vh;
 			max-height: 400px;
@@ -44,11 +50,6 @@
 			padding-left: 1px;
 			padding-right: 1px;
 			letter-spacing: 1px;
-		}
-
-		#ipt {
-			height: calc(100vh - 75vh - 36px);
-			max-height: 200px;
 		}
 
 		#input {
@@ -81,6 +82,7 @@
   </head>
   <body>
     <main>
+		<section id="prompt-title"></section>
 		<section id="prompt"></section>
 		<section id="ipt">
 			<textarea id="input"></textarea>

@@ -1,6 +1,8 @@
 import prompt from '/prompt'
 
-document.getElementById('ipt').style.height = `calc(100vh - ${document.getElementById('prompt').clientHeight}px - 36px)`
+const height = document.querySelector('main').clientHeight - document.getElementById('prompt-title').clientHeight - document.getElementById('prompt').clientHeight - 35
+console.log(height)
+document.getElementById('ipt').style.height = height + 'px'
 
 document.getElementById('stat-chs').innerHTML = 0
 document.getElementById('stat-tme').innerHTML = 0
@@ -19,7 +21,10 @@ const create_span = (ch, i) => {
 	document.getElementById('prompt').append(span)
 }
 
-const load_follow_text = (prompt) => prompt.text.split('').forEach((c, i) => create_span(c, i))
+const load_follow_text = (prompt) => {
+	document.getElementById('prompt-title').innerHTML = prompt.title
+	prompt.text.split('').forEach((c, i) => create_span(c, i))
+}
 load_follow_text(prompt)
 
 const load_follow_audio = (prompt) => {}
@@ -43,17 +48,9 @@ document.addEventListener('keydown', e => {
 		data.init = Date.now()
 	if (data.timeout)
 		clearTimeout(data.timeout)
-	// console.log(e.key)
+
 	const idx = data.q.length
 	switch (e.key) {
-		case '~':
-			if (document.activeElement?.id === 'input')
-				document.body.focus()
-			else
-				document.getElementById('input').focus()
-			return;
-		case 'Tab':
-			break;
 		case 'Backspace':
 			const ch = document.getElementById(idx - 1)
 			if (data.q.length)

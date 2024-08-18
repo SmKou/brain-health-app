@@ -27,6 +27,8 @@ Users type on keyboards under different contexts. The conditions of these contex
 
 The mental states identified are then matched to whether the user is typing in a native language or from and to codes like shorthand and programming. One might think that speed and accuracy is not as necessary for shorthand and programming, but given shorthand is often for transcription or notetaking, along with programming, increasing one's speed and accuracy can only help to improve one's capacity for completing their work.
 
+Touch typing?
+
 ### JS Prototype
 Main functionality:
 - User types characters
@@ -60,9 +62,12 @@ Main functionality:
 ### Go/Gin prototype
 Main functionality:
 - Store titles and prompts (text | audio)
+  - prompt id, text data, audio fk
+  - audio id, slow file, med file, fast file
 - Store user data
-
+  - prompt id, user id, last cps, last wpm, fastest cps, fastest wpm
 
 ## Speaking
 
 ## Logic
+For improving and practicing logical skills, users can do exercises like Einstein's riddle, or games like (Killer) Sudoku, Cross sum, and Picture Cross. However, to really practice logical reasoning (and critical thinking), a user has to put such skills into practice, namely in questioning, analyzing and making decisions on both emotional, personal, and impersonal subjects. Rather than create a mindfulness app, or a reflections journal, the point is the analysis of one's thoughts, feelings and perceptions, so this may entail some guided thinking. Focusing on essentials like sensory information, memories, known and unknowns, the guidance is simple and repetitive, but it's to learn and practice ascertaining perspective, context, content and framing. This means both games and

@@ -1,6 +1,6 @@
 import prompt from '/prompt'
 
-const height = document.querySelector('main').clientHeight - document.getElementById('prompt-title').clientHeight - document.getElementById('prompt').clientHeight - 35
+const height = document.querySelector('main').clientHeight - document.getElementById('prompt-title').clientHeight - document.getElementById('prompt').clientHeight - 36
 console.log(height)
 document.getElementById('ipt').style.height = height + 'px'
 
@@ -42,7 +42,7 @@ document.addEventListener('keydown', e => {
 	if (!data.interval)
 		data.interval = setInterval(() => {
 			data.time += .1
-			document.getElementById('stat-tme').innerHTML = data.time
+			document.getElementById('stat-tme').innerHTML = data.time.toFixed(1)
 		}, 100)
 	if (!data.init)
 		data.init = Date.now()
